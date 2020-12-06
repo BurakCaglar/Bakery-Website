@@ -1,0 +1,900 @@
+/**** FONTS START *****/
+
+@font-face {
+  font-family: Scriptina;
+  src: url(/fonts/SCRIPTIN.ttf);
+}
+
+@font-face {
+  font-family: Alegreya-Regular;
+  src: url(/fonts/Alegreya-Regular.ttf);
+}
+
+@font-face {
+  font-family: Playfair-Display;
+  src: url(/fonts/Playfair-Display.ttf);
+}
+
+@font-face {
+  font-family: ProximaNova;
+  src: url(/fonts/ProximaNova.otf);
+}
+
+/**** FONTS END *****/
+
+/**** VARIABLES START *****/
+
+$primary-font: Alegreya-Regular;
+$secondary-font: Playfair-Display;
+$third-font: ProximaNova;
+$brand-font: Scriptina;
+
+
+$primary-color: #56534C;
+$secondary-color: #fff;
+$third-color: #A47D5E;
+$fourth-color: #C2BEBA;
+$fifth-color: #DFC691;
+
+$primary-shadow: 0px .3rem 2rem rgba($color: #000000, $alpha: .7);
+
+/**** VARIABLES END *****/
+
+/*************** GENERAL SETTINGS START *****************/
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+}
+
+@media only screen and (min-width : 1440px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl { 
+    max-width: 1440px !important; 
+  } 
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-family: $primary-font;
+  color: $primary-color;
+  font-size: 4.8rem;
+  font-weight: bold;
+  letter-spacing: .2rem;
+}
+
+
+/*************** GENERAL SETTINGS END *****************/
+
+/******* BUTTON START *******/
+
+.button {
+  padding: 1.5rem 5rem;
+  font-style: 1.8rem;
+  background-color: rgba($color: #56534C, $alpha: 0.53);
+  color: #fff;
+  font-weight: bold;
+  
+  border: 2px dashed #9E9C93;
+  -webkit-transition: background-color .7s ease-out;
+  -moz-transition: background-color .7s ease-out;
+  -o-transition: background-color .7s ease-out;
+  transition: background-color .7s ease-in;
+
+  
+  &:focus {
+    outline-color: #56534C;
+    outline: 0px auto;
+    border: 2px dashed #56534C;
+  }
+  &:hover {
+      background-color: #fff;
+      border: 2px dashed #56534C;
+      color: #56534C;
+      -webkit-transition: background-color .7s ease-out;
+      -moz-transition: background-color .7s ease-out;
+      -o-transition: background-color .7s ease-out;
+      transition: background-color .7s ease-out;
+  }
+}
+/******* BUTTON END *******/
+
+
+/* FONT SIZE FOR RESPONSIVE START */
+
+
+@media (min-width: 50px) {
+  html {
+    font-size: 7px;
+  }
+}
+
+@media (min-width: 960px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+
+
+@media (min-width: 1300px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+/* FONT SIZE FOR RESPONSIVE END */
+
+/******* HEADER *******/
+
+
+header {
+    background-image: url(/images/header.png);
+    
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+
+    
+
+
+
+    .main-content {
+     
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+      z-index: 5;
+
+      h1 {
+        font-size: 9.2rem;
+        color: $secondary-color;
+        font-family: Playfair-Display;
+        font-weight: bold;
+        text-shadow: 0px 1rem 12rem rgba($color: #000000, $alpha: .5);
+      }
+
+      img {
+        margin-top: 6rem;
+        margin-bottom: 6rem;
+        
+      }
+
+      p {
+        font-family: $third-font;
+        color: $secondary-color;
+        font-size: 2.4rem;
+        margin-bottom: 6.5rem;
+        text-shadow: 0px 1rem 12rem rgba($color: #000000, $alpha: .5);
+      }
+
+      a {
+        font-family: $primary-font;
+        color: $secondary-color;
+        font-size: 1.4rem;
+        letter-spacing: .5rem;
+        text-shadow: 0px 1rem 12rem rgba($color: #000000, $alpha: .5);
+        
+      }
+    }
+
+    //**** NAV START ****/
+
+    nav {
+
+      button {
+        &:focus { 
+          outline-color: gray;
+        }
+      }
+
+      
+      
+      .navbar-brand {
+        font-family: $brand-font;
+        font-size: 3rem;
+        
+        color: $secondary-color !important;
+        letter-spacing: 1rem;
+        
+      }
+      .collapse {
+
+        .social-medias {
+          
+          
+            a {
+              font-size: 2rem;
+              color: #EFEBE4;
+              &:not(:last-of-type) {
+                margin-right: 2.5rem;
+              }
+  
+              @media (max-width: 1200px) {
+                display: none;
+              }
+              
+              &:hover {
+                color: $fourth-color;
+              }
+          }
+        }
+        &:focus {
+          border-color: $primary-color;
+        }
+        ul {
+          
+          li {
+            &:not(:first-child) {
+              margin-left: 5rem;
+            }
+            a {
+              font-family: $primary-font;
+              letter-spacing: .5rem;
+              color: $secondary-color !important;
+              font-size: 1.4rem;
+              
+              }
+            }
+          }
+        }
+
+        
+    }
+}
+
+/*** NAV EXTRA START ***/
+.navbar-bg {
+  background-color: rgba($color: #56534c, $alpha: .53);
+  
+}
+
+.collapsing {
+  font-family: $primary-font;
+  letter-spacing: .5rem;
+  
+  font-size: 1.4rem;
+  a {
+    color: $secondary-color !important;
+  }
+}
+/*** NAV EXTRA END ***/
+
+
+
+/******* HEADER END *******/
+
+/******* ARTICLE ART OF CAKES START *******/
+
+
+
+  #art-of-cakes {
+    background-image: url(/images/main-art-of-cakes);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .bullet {
+      position: absolute;   
+      top: -7rem;
+      left: 50%;
+      transform: translate(-50%, 0);
+
+      @media screen and (max-width: 1600px) {
+          display: none;
+      }
+    }
+   
+
+
+    .art-of-cakes-content {
+      margin: auto auto;
+
+      @media screen and (max-width: 1000px) {
+        margin-top: 10%;
+    }
+
+      .art-of-cakes-title {
+
+        h3 {
+          letter-spacing: .3rem;
+        }
+
+        p {
+          color: $third-color;
+          font-size: 1.4rem;
+          font-weight: bold;
+          letter-spacing: .2rem;
+          
+        }
+      }
+
+      .art-of-cakes-body {
+        margin-top: 6.4rem;
+        h4 {
+          font-family: $primary-font;
+          color: $primary-color;
+          font-weight: bold;
+          font-size: 2.4rem;
+          margin: 1.73rem 0 3.6rem 0;
+        }
+        p {
+          font-family: $third-font;
+          color: $primary-color;
+          font-size: 1.4rem;
+          letter-spacing: .1rem;
+          line-height: 2.5rem;
+        }
+      }
+
+      .art-of-cakes-chef {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        
+        h5 {
+          border-bottom: 1px solid #D7D5CA;
+          border-top: 1px solid #D7D5CA;
+          font-family: $primary-font;
+          padding: 1.4rem 0;
+          color: $primary-color;
+          font-size: 2.4rem;
+          letter-spacing: .2rem;
+        }
+
+        img {
+          margin: 0 4rem;
+        }
+      }
+
+      .art-of-cakes-signature {
+        margin-top: 1.4rem;
+
+        p {
+          font-family: $brand-font;
+          color: $third-color;
+          font-size: 2.4rem;
+          letter-spacing: .3rem;
+        }
+        span {
+          font-size: 6rem;
+          color: $primary-color;
+        }
+      }
+    }
+    
+
+   
+
+
+    .art-of-cakes-photo-content {
+      margin: 12rem 0;
+      position: relative;
+
+      @media screen and (max-width: 1441px) {
+        text-align: center;
+        
+    }
+
+      &:after {
+        position: absolute;
+        content: url(/images/tastes-so-good.png);
+        width: 26rem; 
+        height: 26rem;
+        top: 25%;
+        left: 26%;
+        opacity: .9;
+        @media screen and (max-width: 1441px) {
+            display: none;
+        }
+      }
+
+      .box {
+        outline: 5px solid #fff;
+        outline-offset: -1rem;
+        box-shadow: 0px 1rem 1rem rgba($color: #000000, $alpha: .7);
+        &:nth-of-type(odd) {
+          margin-right: 2rem;
+        }
+        &:nth-child(3), &:nth-child(4) {
+          margin-top: 2rem;
+        }
+      }
+      .tastes-so-good {
+        position: absolute;
+        top: 13rem;
+        left: 20rem;
+        opacity: .4;
+      }
+
+      p {
+        position: absolute;
+        top: 33rem;
+        left: 20rem;
+        
+      }
+    }
+  }
+
+
+/******* ARTICLE ART OF CAKES END *******/
+
+
+/******* ARTICLE TASTY PANCAKES START *******/
+  #tasty-pancakes {
+    background-image: url(/images/tasty-pancakes-bg.png);
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    .tasty-pancakes-photo {
+      box-shadow: $primary-shadow;
+ 
+        @media screen and (max-width: 992px) {
+          img {
+            display: none;
+          }
+      }
+    }
+    
+    .tasty-pancakes-content {
+      position: relative;
+      box-shadow: $primary-shadow;
+
+      .windwill {
+        position: absolute;
+        width: 30rem;
+        height: 30rem;
+        right: 0;
+        bottom: 3rem;
+        z-index: 1;
+      }
+      
+      .tasty-pancakes-title {
+        z-index: 10;
+        margin-top: 6rem;
+        margin-bottom: 6rem;
+        p {
+          color: $third-color;
+          font-size: 1.4rem;
+          font-weight: bold;
+          letter-spacing: .2rem;
+        }
+      }
+
+      .tasty-pancakes-body {
+        z-index: 10;
+        p {
+          font-family: $third-font;
+          color: $primary-color;
+          font-size: 1.4rem;
+          letter-spacing: .1rem;
+        }
+      }
+
+      .tasty-pancakes-footer {
+        margin-top: 9rem;
+        z-index: 10;
+        img {
+          &:not(:nth-of-type(3)) {
+            margin-right: 3rem;
+          }
+        }
+
+        a {
+          &:nth-of-type(2) {
+            margin-left: 3rem;
+          }
+        }
+
+        @media screen and (max-width: 1451px) {
+          margin-top: 5rem;
+          img {
+            height: 4.3rem; 
+            width: 4.3rem;
+          }
+          a {
+            height: 2.2rem; 
+            width: 2.2rem;
+          }
+      }
+
+      @media screen and (max-width: 993px) {
+        margin-top: 5rem;
+        
+        img {
+          height: 3.8rem; 
+          width: 3.8rem;
+        }
+        a {
+          height: 1.4rem; 
+          width: 1.4rem;
+        }
+    }
+      } 
+
+      
+
+      .vector-content {
+        
+        img {
+          position: absolute;
+          background-color: #FFFFFF;
+          box-shadow: $primary-shadow;
+          right: -10rem;
+         top: -5rem;
+         @media screen and (max-width: 1100px) {
+          display: none;
+        }
+        }
+        
+       
+
+      }
+    }
+  }
+
+/******* ARTICLE TASTY PANCAKES START *******/
+
+/******* ARTICLE BREAKFAST START *******/
+
+  #breakfast {
+    background-image: url(/images/breakfast-bg.png);
+    position: relative;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:after {
+      position: absolute;
+      content: url(/images/olive-branch.png);
+      right: 0;
+      bottom: 0;
+    }
+    
+
+    .breakfast-content {
+      margin-bottom: auto;
+      margin-top: auto;
+
+      @media screen and (max-width: 1440px) {
+        
+      }
+      
+
+      .breakfast-title {
+        margin-bottom: 5.4rem;
+        h3 {
+          font-size: 6rem;
+          font-weight: bold;
+          color: $secondary-color;
+        }
+        p {
+          font-size: 1.8rem;
+          color: #C8A593;
+          font-family: $primary-font;
+          font-weight: bold;
+          letter-spacing: .1rem;
+        }
+      }
+
+      .breakfast-body {
+        h4 {
+          font-family: $primary-font;
+          color: $secondary-color;
+          font-size: 3rem;
+          letter-spacing: .1rem;
+          font-weight: bold;
+        }
+        p {
+          font-family: $third-font;
+          color: $fourth-color;
+          font-size: 1.6rem;
+          letter-spacing: .1rem;
+        }
+
+        h3 {
+          font-family: $primary-font;
+          color: $fifth-color;
+          font-size: 3.6rem;
+          letter-spacing: .1rem;
+          margin: 1.3rem 0 3.5rem 0;
+        }
+      }
+ 
+    }
+
+    .breakfast-photo-content {
+      text-align: right;
+      margin-bottom: auto !important;
+      margin-top: auto !important;
+     
+      
+      .breakfast-photo {
+        position: relative; 
+
+        @media screen and (max-width: 1440px) {
+          display: none;
+        }
+        
+        h2 {
+          text-align: center;
+          position: absolute;
+          top: 32%;
+          left: 45%;
+          font-size: 4.4rem;
+          font-family: $primary-font;
+          color: $primary-color;
+          font-weight: bold;
+          
+        }
+        p {
+          text-align: center;
+          position: absolute;
+          font-family: $third-font;
+          color: $primary-color;
+          letter-spacing: .1rem;
+          top: 55%;
+          left: 45%;
+        }
+
+        a {
+          position: absolute;
+           padding: 1.3rem 7rem;
+           color: $third-color;
+           font-family: $primary-font;
+           font-size: 1.8rem;
+           font-weight: bold;
+           border: 1px solid #9E9C93;
+           top: 75%;
+           left: 56%;
+
+           -webkit-transition: background-color .7s ease-out;
+          -moz-transition: background-color .7s ease-out;
+          -o-transition: background-color .7s ease-out;
+          transition: background-color .7s ease-in;
+        
+          
+          &:focus {
+            outline-color: #9E9C93;
+            outline: 0px auto;
+            border: 1px solid #9E9C93;
+          }
+          &:hover {
+              background-color: #fff;
+              border: 1px solid #9E9C93;
+              color: $primary-font;
+              -webkit-transition: background-color .7s ease-out;
+              -moz-transition: background-color .7s ease-out;
+              -o-transition: background-color .7s ease-out;
+              transition: background-color .7s ease-out;
+          }
+           
+        }
+      }
+    }
+  }
+
+/******* ARTICLE BREAKFAST END *******/
+
+/******* FOOTER START *******/
+  footer {
+    background-color: #F3F1E9;
+    position: relative;
+    &:before {
+      position: absolute;
+      content: url(/images/footer-vector.svg);
+      top: 0;
+      width: 100%;
+      text-align: center;
+      @media screen and (max-width: 772px) {
+        display: none;
+      }
+    }
+
+    .sandwich-content {
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 8.6rem;
+      text-align: center;
+
+      p {
+          color: $third-color;
+          font-size: 1.4rem;
+          font-weight: bold;
+          letter-spacing: .2rem;
+      }
+    }
+    
+    .left-sandwich-content {
+      .left-content {
+        text-align: center;
+        &:not(:nth-of-type(1)) {
+          margin-top: 5.7rem;
+        }
+
+        h4 {
+          font-family: $primary-font;
+          color: $third-color;
+          font-size: 3rem;
+          font-weight: bold;
+          letter-spacing: .1rem;
+          margin-top: 1.5rem;
+          margin-bottom: 1.5rem;
+        }
+        p {
+          color: $primary-color;
+          font-size: 1.4rem;
+          letter-spacing: .1rem;
+        }
+
+      }
+    }
+
+    .right-sandwich-content {
+      margin-top: auto;
+      margin-bottom: auto;
+      position: relative;
+
+      img {
+        border: 1rem solid #fff;
+        box-shadow: 0px 0px 16px rgba($color: #000000, $alpha: .54);;
+      }
+
+      &:after {
+        position: absolute;
+        content: "FULL RECIPE";
+        left: -1rem;
+        bottom: -2rem;
+        
+          padding: 1.8rem 2.85rem;
+          font-size: 1.8rem;
+          letter-spacing: .1rem;
+          background-color: #fff;
+          color: #DFC691;
+          font-weight: bold;
+          
+          border: 2px dashed #DFC691;
+          -webkit-transition: background-color .7s ease-out;
+          -moz-transition: background-color .7s ease-out;
+          -o-transition: background-color .7s ease-out;
+          transition: background-color .7s ease-in;
+        
+          
+          &:focus {
+            outline-color: #56534C;
+            outline: 0px auto;
+            border: 2px dashed #56534C;
+          }
+          &:hover {
+              background-color: #fff;
+              border: 2px dashed #56534C;
+              color: #56534C;
+              -webkit-transition: background-color .7s ease-out;
+              -moz-transition: background-color .7s ease-out;
+              -o-transition: background-color .7s ease-out;
+              transition: background-color .7s ease-out;
+          }
+        }
+    }
+
+    .nav-footer-wrapper {
+        margin-top: 9rem;
+        
+      .nav-footer  {
+        margin-bottom: 6rem;
+        border-top: 1px solid #C2BEBA;
+        border-bottom: 1px solid #C2BEBA;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+        
+        a {
+          font-family: $primary-font;
+          color: $primary-color;
+          font-size: 1.4rem;
+          letter-spacing: .2rem;
+          margin-left: 5rem;
+          margin-right: 5rem;
+        }
+
+        @media screen and (max-width: 1450px) {
+          margin-bottom: 6rem;
+          border-top: 1px solid #C2BEBA;
+          border-bottom: 1px solid #C2BEBA;
+          padding-top: 2.5rem;
+          padding-bottom: 2.5rem;
+          text-align: center;
+        a {
+          
+          font-family: $primary-font;
+          color: $primary-color;
+          font-size: 1rem;
+          letter-spacing: .2rem;
+          margin-left: 3rem;
+          margin-right: 3rem;
+        }
+        }
+
+        @media screen and (max-width: 750px) {
+          margin-bottom: 6rem;
+          border-top: 1px solid #C2BEBA;
+          border-bottom: 1px solid #C2BEBA;
+          padding-top: 2.5rem;
+          padding-bottom: 2.5rem;
+          text-align: center;
+        a {
+          
+          font-family: $primary-font;
+          color: $primary-color;
+          font-size: 1.4rem;
+          letter-spacing: .2rem;
+          margin-left: .5rem;
+          margin-right: .5rem;
+        }
+        }
+
+        @media screen and (max-width: 536px) {
+          display: none;
+        }
+      }
+  
+      .signature {
+        @media screen and (max-width: 536px) {
+          left: 40%;
+          transform: translate(-40%, 0);
+          margin-bottom: 3rem;
+        }
+        a {
+          
+          color: $primary-color;
+          font-family: $brand-font;
+          font-size: 3rem;
+          letter-spacing: 1rem;
+
+          
+        }
+        
+      }
+    }
+  }
+
+  /******* FOOTER END *******/
